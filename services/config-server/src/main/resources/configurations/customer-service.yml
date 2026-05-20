@@ -2,4 +2,4 @@ spring:
   mongodb:
     uri: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@localhost:27017/customer?authSource=admin
 server:
-  port: 8090
+  port: 8001

@@ -3,13 +3,13 @@ services:
     container_name: ms_pg_sql
     image : postgres:latest
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: lyevsky
+      POSTGRES_PASSWORD: lyevsky
       PGDATA: /var/lib/postgresql/data
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-        - "5432:5432"
+        - "5433:5432"
     networks:
       - microservices-network
     restart: unless-stopped
