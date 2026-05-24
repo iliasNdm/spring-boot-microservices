@@ -1,4 +1,4 @@
-package com.lyevsky.microservices.product;
+package com.lyevsky.microservices.product.dto;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

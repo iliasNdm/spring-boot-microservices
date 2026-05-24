@@ -1,6 +1,11 @@
-package com.lyevsky.microservices.product;
+package com.lyevsky.microservices.product.web;
 
 
+import com.lyevsky.microservices.product.service.ProductService;
+import com.lyevsky.microservices.product.dto.ProductPurshaseRequest;
+import com.lyevsky.microservices.product.dto.ProductPurshaseResponse;
+import com.lyevsky.microservices.product.dto.ProductRequest;
+import com.lyevsky.microservices.product.dto.ProductResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +25,8 @@ public class ProductController {
     }
 
     @PostMapping("/purchase")
-    public ResponseEntity<List<ProductPurshaseResponse>> purshaseProducts(@RequestBody ProductPurshaseRequest request){
-        return ResponseEntity.ok(productService.purshaseProducts(request));
-
+    public ResponseEntity<List<ProductPurshaseResponse>> purshaseProducts(@RequestBody List<ProductPurshaseRequest> requests){
+        return ResponseEntity.ok(productService.purshaseProducts(requests));
     }
 
     @GetMapping("/{product-id}")

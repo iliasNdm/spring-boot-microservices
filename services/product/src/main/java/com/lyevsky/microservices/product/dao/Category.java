@@ -1,4 +1,4 @@
-package com.lyevsky.microservices.product;
+package com.lyevsky.microservices.product.dao;
 
 
 import jakarta.persistence.*;
