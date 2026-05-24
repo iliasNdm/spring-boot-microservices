@@ -1,6 +1,7 @@
 package com.lyevsky.microservices.product.handler;
 
 import com.lyevsky.microservices.product.exceptions.ProductPurshaseException;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -18,6 +19,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleCustomerNotFoundException(ProductPurshaseException exp) {
         return ResponseEntity.status(BAD_REQUEST).body(exp.getMessage());
     }
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<String> handleEntityNotFoundException(ProductPurshaseException exp) {
+        return ResponseEntity.status(BAD_REQUEST).body(exp.getMessage());
+    }
+
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException exp) {
