@@ -1,4 +1,7 @@
-package com.lyevsky.microservices.dao;
+package com.lyevsky.microservices.order.dao;
 
-public interface OrderRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
+
 }

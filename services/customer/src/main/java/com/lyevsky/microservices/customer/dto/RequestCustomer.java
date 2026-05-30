@@ -1,5 +1,6 @@
-package com.lyevsky.microservices.customer;
+package com.lyevsky.microservices.customer.dto;
 
+import com.lyevsky.microservices.customer.dao.Address;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 

@@ -1,4 +1,4 @@
-package com.lyevsky.microservices.customer;
+package com.lyevsky.microservices.customer.dao;
 
 
 import lombok.AllArgsConstructor;
@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import org.springframework.validation.annotation.Validated;
 
 @AllArgsConstructor

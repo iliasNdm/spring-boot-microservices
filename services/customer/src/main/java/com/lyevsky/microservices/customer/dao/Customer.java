@@ -1,4 +1,4 @@
-package com.lyevsky.microservices.customer;
+package com.lyevsky.microservices.customer.dao;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

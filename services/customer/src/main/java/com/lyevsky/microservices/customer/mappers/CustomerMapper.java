@@ -1,5 +1,8 @@
-package com.lyevsky.microservices.customer;
+package com.lyevsky.microservices.customer.mappers;
 
+import com.lyevsky.microservices.customer.dto.CustomerResponse;
+import com.lyevsky.microservices.customer.dto.RequestCustomer;
+import com.lyevsky.microservices.customer.dao.Customer;
 import org.springframework.stereotype.Component;
 
 @Component

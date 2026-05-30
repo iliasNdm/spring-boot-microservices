@@ -1,6 +1,11 @@
-package com.lyevsky.microservices.customer;
+package com.lyevsky.microservices.customer.service;
 
+import com.lyevsky.microservices.customer.dto.RequestCustomer;
+import com.lyevsky.microservices.customer.dao.Customer;
+import com.lyevsky.microservices.customer.dao.CustomerRepository;
+import com.lyevsky.microservices.customer.dto.CustomerResponse;
 import com.lyevsky.microservices.customer.exception.CustomerNotFoundException;
+import com.lyevsky.microservices.customer.mappers.CustomerMapper;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;

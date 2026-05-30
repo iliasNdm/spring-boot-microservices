@@ -1,5 +1,8 @@
-package com.lyevsky.microservices.customer;
+package com.lyevsky.microservices.customer.web;
 
+import com.lyevsky.microservices.customer.dto.CustomerResponse;
+import com.lyevsky.microservices.customer.service.CustomerService;
+import com.lyevsky.microservices.customer.dto.RequestCustomer;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
