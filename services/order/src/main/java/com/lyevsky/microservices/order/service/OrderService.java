@@ -43,7 +43,8 @@ public class OrderService {
                 .map(lineRequest -> orderLineMapper.toOrderLine(lineRequest, order))
                 .forEach(orderLineRepository::save);
 
-//        start the payment process
+//        todo start the payment process
+
 //        send the order confirmation to our kafka broker
         return order.getId();
     }
