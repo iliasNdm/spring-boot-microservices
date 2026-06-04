@@ -1,4 +1,4 @@
-package com.lyevsky.microservices.order.dao;
+package com.lyevsky.microservices.order.order.dao;
 
 public enum PaymentMethod {
     PAYPAL,

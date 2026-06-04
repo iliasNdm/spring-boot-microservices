@@ -1,6 +1,6 @@
-package com.lyevsky.microservices.order.dto;
+package com.lyevsky.microservices.order.order.dto;
 
-import com.lyevsky.microservices.order.dao.PaymentMethod;
+import com.lyevsky.microservices.order.order.dao.PaymentMethod;
 import com.lyevsky.microservices.order.orderline.OrderLineRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

@@ -1,7 +1,7 @@
 package com.lyevsky.microservices.order.orderline;
 
 
-import com.lyevsky.microservices.order.dao.Order;
+import com.lyevsky.microservices.order.order.dao.Order;
 import jakarta.persistence.*;
 import lombok.*;
 

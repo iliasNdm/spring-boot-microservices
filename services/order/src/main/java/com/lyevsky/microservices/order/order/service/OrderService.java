@@ -1,12 +1,12 @@
-package com.lyevsky.microservices.order.service;
+package com.lyevsky.microservices.order.order.service;
 
 
 import com.lyevsky.microservices.order.customer.CustomerClient;
-import com.lyevsky.microservices.order.dao.OrderRepository;
-import com.lyevsky.microservices.order.dto.OrderRequest;
-import com.lyevsky.microservices.order.dto.OrderResponse;
+import com.lyevsky.microservices.order.order.dao.OrderRepository;
+import com.lyevsky.microservices.order.order.dto.OrderRequest;
+import com.lyevsky.microservices.order.order.dto.OrderResponse;
 import com.lyevsky.microservices.order.exceptions.BusinessException;
-import com.lyevsky.microservices.order.mappers.OrderMapper;
+import com.lyevsky.microservices.order.order.mappers.OrderMapper;
 import com.lyevsky.microservices.order.orderline.OrderLineMapper;
 import com.lyevsky.microservices.order.orderline.OrderLineRepository;
 import com.lyevsky.microservices.order.product.ProductClient;
@@ -33,7 +33,7 @@ public class OrderService {
                 .orElseThrow(() -> new BusinessException("Customer with id " + request.customerId() + " not found"));
 
 //        purshase the products => check the products existance and availability using RestTemplate
-        productClient.purchaseProducts(request.products());
+        var purchasedProducts = productClient.purchaseProducts(request.products());
 
 //        persist the order
         var order = orderRepository.save(orderMapper.toOrder(request));

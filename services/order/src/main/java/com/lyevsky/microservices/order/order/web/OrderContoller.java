@@ -1,9 +1,9 @@
-package com.lyevsky.microservices.order.web;
+package com.lyevsky.microservices.order.order.web;
 
 
-import com.lyevsky.microservices.order.dto.OrderRequest;
-import com.lyevsky.microservices.order.dto.OrderResponse;
-import com.lyevsky.microservices.order.service.OrderService;
+import com.lyevsky.microservices.order.order.dto.OrderRequest;
+import com.lyevsky.microservices.order.order.dto.OrderResponse;
+import com.lyevsky.microservices.order.order.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

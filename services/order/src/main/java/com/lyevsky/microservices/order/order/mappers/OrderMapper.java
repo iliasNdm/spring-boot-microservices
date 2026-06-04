@@ -1,11 +1,11 @@
-package com.lyevsky.microservices.order.mappers;
+package com.lyevsky.microservices.order.order.mappers;
 
-import com.lyevsky.microservices.order.dao.Order;
+import com.lyevsky.microservices.order.order.dao.Order;
 import com.lyevsky.microservices.order.orderline.OrderLine;
 import com.lyevsky.microservices.order.orderline.OrderLineRequest;
 import com.lyevsky.microservices.order.orderline.OrderLineResponse;
-import com.lyevsky.microservices.order.dto.OrderRequest;
-import com.lyevsky.microservices.order.dto.OrderResponse;
+import com.lyevsky.microservices.order.order.dto.OrderRequest;
+import com.lyevsky.microservices.order.order.dto.OrderResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;

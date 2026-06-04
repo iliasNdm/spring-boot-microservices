@@ -1,4 +1,4 @@
-package com.lyevsky.microservices.order.dao;
+package com.lyevsky.microservices.order.order.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
