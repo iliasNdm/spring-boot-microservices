@@ -11,6 +11,8 @@ import com.lyevsky.microservices.order.exceptions.BusinessException;
 import com.lyevsky.microservices.order.order.mappers.OrderMapper;
 import com.lyevsky.microservices.order.orderline.OrderLineMapper;
 import com.lyevsky.microservices.order.orderline.OrderLineRepository;
+import com.lyevsky.microservices.order.payment.PaymentClient;
+import com.lyevsky.microservices.order.payment.PaymentRequest;
 import com.lyevsky.microservices.order.product.ProductClient;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
@@ -30,6 +32,7 @@ public class OrderService {
     private final OrderLineRepository orderLineRepository;
     private final OrderLineMapper orderLineMapper;
     private final OrderProducer orderProducer;
+    private final PaymentClient paymentClient;
 
     public Long createOrder(@Valid OrderRequest request) {
 
@@ -48,7 +51,14 @@ public class OrderService {
                 .map(lineRequest -> orderLineMapper.toOrderLine(lineRequest, order))
                 .forEach(orderLineRepository::save);
 
-//        todo start the payment process
+//       start the payment process
+        var paymentRequest = new PaymentRequest(
+                request.amount(),
+                request.paymentMethod(),
+                order.getId(),
+                order.getReference(),
+                customer);
+        paymentClient.requestOrderPayment(paymentRequest);
 
 //        send the order confirmation to our kafka broker
         orderProducer.sendOrderConfirnmation(new OrderConfirmation(

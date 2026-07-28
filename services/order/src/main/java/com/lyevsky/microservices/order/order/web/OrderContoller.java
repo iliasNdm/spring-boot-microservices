@@ -27,7 +27,7 @@ public class OrderContoller {
     }
 
     @GetMapping("/{order-id}")
-    public ResponseEntity<OrderResponse> findById(@PathVariable("order-id") Integer orderId){
+    public ResponseEntity<OrderResponse> findById(@PathVariable("order-id") Long orderId){
         return ResponseEntity.ok(orderService.findById(orderId));
     }
 
